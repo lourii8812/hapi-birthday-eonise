@@ -45,7 +45,7 @@ function launchBomb() {
     explode.innerHTML = ["💥", "🎉", "🎊", "✨"][Math.floor(Math.random() * 4)];
 
     explode.style.left = Math.random() * 100 + "vw";
-    explode.style.top = Math.random() * 100 + "vh";
+    explode.style.top = "-50px";
     explode.style.fontSize = Math.random() * 20 + 20 + "px";
     explode.style.animationDuration = Math.random() * 4 + 3 + "s";
 
