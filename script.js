@@ -61,3 +61,35 @@ function showImages() {
   document.getElementById("home").classList.remove("active");
   document.getElementById("images").classList.add("active");
 }
+function showFamily() {
+  document.getElementById("home").classList.remove("active");
+  document.getElementById("dafam").classList.add("active");
+}
+function showLetter() {
+  document.getElementById("home").classList.remove("active");
+  document.getElementById("letter").classList.add("active");
+}
+function showChanelle() {
+  document.getElementById("letter").classList.remove("active");
+  document.getElementById("chan").classList.add("active");
+}
+function showLourence() {
+  document.getElementById("letter").classList.remove("active");
+  document.getElementById("lour").classList.add("active");
+}
+function showHeshei() {
+  document.getElementById("letter").classList.remove("active");
+  document.getElementById("heshei").classList.add("active");
+}
+function showIsaac() {
+  document.getElementById("letter").classList.remove("active");
+  document.getElementById("sac").classList.add("active");
+}
+function showNate() {
+  document.getElementById("letter").classList.remove("active");
+  document.getElementById("nate").classList.add("active");
+}
+function showCredits() {
+  document.getElementById("home").classList.remove("active");
+  document.getElementById("creds").classList.add("active");
+}
