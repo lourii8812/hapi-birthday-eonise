@@ -74,8 +74,6 @@ p {
   font-family: "Caveat", cursive;
 }
 
-/* BACK BUTTON */
-
 .back-btn {
   position: fixed;
   bottom: 20px;
@@ -92,8 +90,6 @@ p {
 }
 
 
-/* FALLING CONFETTI */
-
 .leaf {
   position: fixed;
   top: -50px;
@@ -109,8 +105,6 @@ p {
 }
 
 
-/* FALLING SPARKLES */
-
 .spark {
   position: fixed;
   top: -50px;
@@ -125,9 +119,6 @@ p {
   }
 }
 
-
-/* FALLING EXPLOSION */
-
 .explode {
   position: fixed;
   top: -50px;
@@ -140,4 +131,29 @@ p {
   to {
     transform: translateY(110vh) rotate(360deg);
   }
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+#gallery img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  padding: 10px;
+  background: white;
+  border: 3px solid #ffb6c1;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+  transform: scale(1.05) rotate(2deg);
 }
