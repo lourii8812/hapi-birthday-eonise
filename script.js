@@ -56,3 +56,8 @@ function launchBomb() {
     }, 7000);
   }
 }
+
+function showImages() {
+  document.getElementById("home").classList.remove("active");
+  document.getElementById("images").classList.add("active");
+}
