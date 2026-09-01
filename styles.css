@@ -73,3 +73,71 @@ p {
 .letter {
   font-family: "Caveat", cursive;
 }
+
+/* BACK BUTTON */
+
+.back-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 20px;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  z-index: 1000;
+}
+
+
+/* FALLING CONFETTI */
+
+.leaf {
+  position: fixed;
+  top: -50px;
+  z-index: 999;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+
+/* FALLING SPARKLES */
+
+.spark {
+  position: fixed;
+  top: -50px;
+  z-index: 999;
+  pointer-events: none;
+  animation: sparkleFall linear forwards;
+}
+
+@keyframes sparkleFall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+
+/* FALLING EXPLOSION */
+
+.explode {
+  position: fixed;
+  top: -50px;
+  z-index: 999;
+  pointer-events: none;
+  animation: explodeFall linear forwards;
+}
+
+@keyframes explodeFall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
