@@ -1,95 +1,163 @@
-function launchConfetti() {
-  for (let i = 0; i < 200; i++) {
-    const leaf = document.createElement("div");
+document.addEventListener("DOMContentLoaded", () => {
 
-    leaf.classList.add("leaf");
+    let home = document.getElementById("home");
+    let letter = document.getElementById("letter");
+    let lour = document.getElementById("lour");
+    let chan = document.getElementById("chan");
+    let sac = document.getElementById("sac");
+    let heshei = document.getElementById("heshei");
+    let nate = document.getElementById("nate");
+    let images = document.getElementById("images");
+    let creds = document.getElementById("creds");
+    let backBtn = document.getElementById("back");
 
-    leaf.innerHTML = ["🍂", "🍃", "🍁", "🌺", "🌸", "🍀"][Math.floor(Math.random() * 6)];
+    let currentScreen = home;
+    let previousScreen = null;
 
-    leaf.style.left = Math.random() * 100 + "vw";
-    leaf.style.fontSize = Math.random() * 20 + 20 + "px";
-    leaf.style.animationDuration = Math.random() * 4 + 3 + "s";
+    function showScreen(screen) {
+        currentScreen.classList.remove("active");
 
-    document.body.appendChild(leaf);
+        previousScreen = currentScreen;
+        currentScreen = screen;
 
-    setTimeout(() => {
-      leaf.remove();
-    }, 7000);
-  }
-}
+        currentScreen.classList.add("active");
 
-function launchSparkles() {
-  for (let i = 0; i < 200; i++) {
-    const spark = document.createElement("div");
+        backBtn.style.display = "block";
+    }
 
-    spark.classList.add("spark");
-    spark.innerHTML = ["✨", "🎇", "🎆"][Math.floor(Math.random() * 3)];
+    /* HOME */
 
-    spark.style.left = Math.random() * 100 + "vw";
-    spark.style.fontSize = Math.random() * 20 + 20 + "px";
-    spark.style.animationDuration = Math.random() * 4 + 3 + "s";
+    window.showImages = function() {
+        showScreen(images);
+    }
 
-    document.body.appendChild(spark);
+    window.showFamily = function() {
+        showScreen(document.getElementById("dafam"));
+    }
 
-    setTimeout(() => {
-      spark.remove();
-    }, 7000);
-  }
-}
+    window.showLetter = function() {
+        showScreen(letter);
+    }
 
-function launchBomb() {
-  for (let i = 0; i < 50; i++) {
-    const explode = document.createElement("div");
+    window.showCredits = function() {
+        showScreen(creds);
+    }
 
-    explode.classList.add("explode");
-    explode.innerHTML = ["💥", "🎉", "🎊", "✨"][Math.floor(Math.random() * 4)];
+    /* LETTERS */
 
-    explode.style.left = Math.random() * 100 + "vw";
-    explode.style.top = "-50px";
-    explode.style.fontSize = Math.random() * 20 + 20 + "px";
-    explode.style.animationDuration = Math.random() * 4 + 3 + "s";
+    window.showLourence = function() {
+        showScreen(lour);
+    }
 
-    document.body.appendChild(explode);
+    window.showChanelle = function() {
+        showScreen(chan);
+    }
 
-    setTimeout(() => {
-      explode.remove();
-    }, 7000);
-  }
-}
+    window.showIsaac = function() {
+        showScreen(sac);
+    }
 
-function showImages() {
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("images").classList.add("active");
-}
-function showFamily() {
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("dafam").classList.add("active");
-}
-function showLetter() {
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("letter").classList.add("active");
-}
-function showChanelle() {
-  document.getElementById("letter").classList.remove("active");
-  document.getElementById("chan").classList.add("active");
-}
-function showLourence() {
-  document.getElementById("letter").classList.remove("active");
-  document.getElementById("lour").classList.add("active");
-}
-function showHeshei() {
-  document.getElementById("letter").classList.remove("active");
-  document.getElementById("heshei").classList.add("active");
-}
-function showIsaac() {
-  document.getElementById("letter").classList.remove("active");
-  document.getElementById("sac").classList.add("active");
-}
-function showNate() {
-  document.getElementById("letter").classList.remove("active");
-  document.getElementById("nate").classList.add("active");
-}
-function showCredits() {
-  document.getElementById("home").classList.remove("active");
-  document.getElementById("creds").classList.add("active");
-}
+    window.showHeshei = function() {
+        showScreen(heshei);
+    }
+
+    window.showNate = function() {
+        showScreen(nate);
+    }
+
+    /* BACK BUTTON */
+
+    window.goBack = function() {
+        if (!previousScreen) return;
+
+        currentScreen.classList.remove("active");
+
+        let oldScreen = currentScreen;
+        currentScreen = previousScreen;
+        previousScreen = null;
+
+        currentScreen.classList.add("active");
+
+        if (currentScreen === home) {
+            backBtn.style.display = "none";
+        }
+    }
+
+    /* CONFETTI */
+
+    window.launchConfetti = function() {
+        for (let i = 0; i < 200; i++) {
+
+            let leaf = document.createElement("div");
+
+            leaf.classList.add("leaf");
+
+            leaf.innerHTML = ["🍂", "🍃", "🍁", "🌺", "🌸", "🍀"]
+                [Math.floor(Math.random() * 6)];
+
+            leaf.style.left = Math.random() * 100 + "vw";
+            leaf.style.fontSize = Math.random() * 20 + 20 + "px";
+            leaf.style.animationDuration = Math.random() * 4 + 3 + "s";
+
+            document.body.appendChild(leaf);
+
+            setTimeout(() => {
+                leaf.remove();
+            }, 7000);
+        }
+    }
+
+    /* SPARKLES */
+
+    window.launchSparkles = function() {
+        for (let i = 0; i < 200; i++) {
+
+            let spark = document.createElement("div");
+
+            spark.classList.add("spark");
+
+            spark.innerHTML = ["✨", "🎇", "🎆"]
+                [Math.floor(Math.random() * 3)];
+
+            spark.style.left = Math.random() * 100 + "vw";
+            spark.style.fontSize = Math.random() * 20 + 20 + "px";
+            spark.style.animationDuration = Math.random() * 4 + 3 + "s";
+
+            document.body.appendChild(spark);
+
+            setTimeout(() => {
+                spark.remove();
+            }, 7000);
+        }
+    }
+
+    /* CREDITS EXPLOSION */
+
+    window.launchBomb = function() {
+        for (let i = 0; i < 50; i++) {
+
+            let explode = document.createElement("div");
+
+            explode.classList.add("explode");
+
+            explode.innerHTML = ["💥", "🎉", "🎊", "✨"]
+                [Math.floor(Math.random() * 4)];
+
+            explode.style.left = Math.random() * 100 + "vw";
+            explode.style.top = "-50px";
+            explode.style.fontSize = Math.random() * 20 + 20 + "px";
+            explode.style.animationDuration = Math.random() * 4 + 3 + "s";
+
+            document.body.appendChild(explode);
+
+            setTimeout(() => {
+                explode.remove();
+            }, 7000);
+        }
+    }
+
+    /* INITIAL STATE */
+
+    backBtn.style.display = "none";
+
+});
