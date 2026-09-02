@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let mb = document.getElementById("mainBack");
     let lb = document.getElementById("letterBack");
 
-
+    mb.style.display = "none";
+    lb.style.display = "none";
+    
     window.showImages = function() {
         home.classList.remove("active");
         images.classList.add("active");
