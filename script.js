@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let images = document.getElementById("images");
     let creds = document.getElementById("creds");
     let backBtn = document.getElementById("back");
+    let dafam = documentt.getElementById("dafam");
 
     let currentScreen = home;
     let previousScreen = null;
@@ -65,24 +66,24 @@ document.addEventListener("DOMContentLoaded", () => {
         showScreen(nate);
     }
 
-    /* BACK BUTTON */
 
-    window.goBack = function() {
-        if (!previousScreen) return;
+    window.goBackMain = function() {
+        images.classList.remove("active");
+        letter.classList.remove("active");
+        creds.classList.remove("active");
+        dafam.classList.remove("active");
 
-        currentScreen.classList.remove("active");
-
-        let oldScreen = currentScreen;
-        currentScreen = previousScreen;
-        previousScreen = null;
-
-        currentScreen.classList.add("active");
-
-        if (currentScreen === home) {
-            backBtn.style.display = "none";
-        }
+        home.classList.add("active");
     }
+    window.goBackLetter = function() {
+        heshei.classList.remove("active");
+        nate.classList.remove("active");
+        sac.classList.remove("active");
+        lour.classList.remove("active");
+        chan.classList.remove("active");
 
+        letter.classList.add("active");
+    }
     /* CONFETTI */
 
     window.launchConfetti = function() {
