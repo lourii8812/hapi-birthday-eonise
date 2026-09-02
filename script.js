@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.showNate = function() {
         letter.classList.remove("active");
-        nate.classList.add("active")
+        nate.classList.add("active");
     }
 
 
@@ -144,3 +144,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+});
