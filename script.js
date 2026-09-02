@@ -10,52 +10,81 @@ document.addEventListener("DOMContentLoaded", () => {
     let images = document.getElementById("images");
     let creds = document.getElementById("creds");
     let dafam = document.getElementById("dafam");
+    let mb = document.getElementById("mainBack");
+    let lb = document.getElementById("letterBack");
 
 
     window.showImages = function() {
         home.classList.remove("active");
         images.classList.add("active");
+
+        mb.style.display = "block";
+        lb.style.display = "none";
     }
 
     window.showFamily = function() {
         home.classList.remove("active");
         dafam.classList.add("active");
+        
+        mb.style.display = "block";
+        lb.style.display = "none";
     }
 
     window.showLetter = function() {
         home.classList.remove("active");
         letter.classList.add("active");
+        
+        mb.style.display = "block";
+        lb.style.display = "none";
     }
 
     window.showCredits = function() {
         home.classList.remove("active");
         creds.classList.add("active");
+        
+        mb.style.display = "block";
+        lb.style.display = "none";
     }
 
 
     window.showLourence = function() {
         letter.classList.remove("active");
         lour.classList.add("active");
+
+        mb.style.display = "none";
+        lb.style.display = "block";
     }
 
     window.showChanelle = function() {
         letter.classList.remove("active");
         chan.classList.add("active");
+
+        mb.style.display = "none";
+        lb.style.display = "block";
     }
 
     window.showIsaac = function() {
         letter.classList.remove("active");
         sac.classList.add("active");
+
+        mb.style.display = "none";
+        lb.style.display = "block";
     }
 
     window.showHeshei = function() {
         letter.classList.remove("active");
         heshei.classList.add("active");
+
+        mb.style.display = "none";
+        lb.style.display = "block";
     }
 
     window.showNate = function() {
         letter.classList.remove("active");
         nate.classList.add("active");
+
+        mb.style.display = "none";
+        lb.style.display = "block";
     }
 
 
@@ -66,6 +95,9 @@ document.addEventListener("DOMContentLoaded", () => {
         dafam.classList.remove("active");
 
         home.classList.add("active");
+        
+        mb.style.display = "none";
+        lb.style.display = "none";
     }
     window.goBackLetter = function() {
         heshei.classList.remove("active");
@@ -75,6 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
         chan.classList.remove("active");
 
         letter.classList.add("active");
+
+        mb.style.display = "block";
+        lb.style.display = "none";
     }
     
     window.launchConfetti = function() {
