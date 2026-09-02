@@ -9,61 +9,53 @@ document.addEventListener("DOMContentLoaded", () => {
     let nate = document.getElementById("nate");
     let images = document.getElementById("images");
     let creds = document.getElementById("creds");
-    let backBtn = document.getElementById("back");
-    let dafam = documentt.getElementById("dafam");
+    let dafam = document.getElementById("dafam");
 
-    let currentScreen = home;
-    let previousScreen = null;
-
-    function showScreen(screen) {
-        currentScreen.classList.remove("active");
-
-        previousScreen = currentScreen;
-        currentScreen = screen;
-
-        currentScreen.classList.add("active");
-
-        backBtn.style.display = "block";
-    }
-
-    /* HOME */
 
     window.showImages = function() {
-        showScreen(images);
+        home.classList.remove("active");
+        images.classList.add("active");
     }
 
     window.showFamily = function() {
-        showScreen(document.getElementById("dafam"));
+        home.classList.remove("active");
+        dafam.classList.add("active");
     }
 
     window.showLetter = function() {
-        showScreen(letter);
+        home.classList.remove("active");
+        letter.classList.add("active");
     }
 
     window.showCredits = function() {
-        showScreen(creds);
+        home.classList.remove("active");
+        creds.classList.add("active");
     }
 
-    /* LETTERS */
 
     window.showLourence = function() {
-        showScreen(lour);
+        letter.classList.remove("active");
+        lour.classList.add("active");
     }
 
     window.showChanelle = function() {
-        showScreen(chan);
+        letter.classList.remove("active");
+        chan.classList.add("active");
     }
 
     window.showIsaac = function() {
-        showScreen(sac);
+        letter.classList.remove("active");
+        sac.classList.add("active");
     }
 
     window.showHeshei = function() {
-        showScreen(heshei);
+        letter.classList.remove("active");
+        heshei.classList.add("active");
     }
 
     window.showNate = function() {
-        showScreen(nate);
+        letter.classList.remove("active");
+        nate.classList.add("active")
     }
 
 
@@ -84,8 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         letter.classList.add("active");
     }
-    /* CONFETTI */
-
+    
     window.launchConfetti = function() {
         for (let i = 0; i < 200; i++) {
 
@@ -108,8 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* SPARKLES */
-
     window.launchSparkles = function() {
         for (let i = 0; i < 200; i++) {
 
@@ -131,8 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 7000);
         }
     }
-
-    /* CREDITS EXPLOSION */
 
     window.launchBomb = function() {
         for (let i = 0; i < 50; i++) {
@@ -157,8 +144,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* INITIAL STATE */
-
-    backBtn.style.display = "none";
-
-});
