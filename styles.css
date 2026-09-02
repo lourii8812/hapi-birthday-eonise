@@ -24,7 +24,10 @@ h1 {
   font-family: "Great Vibes", cursive;
   font-size: 60px;
 }
-
+custom {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
 p {
   font-size: 22px;
 }
