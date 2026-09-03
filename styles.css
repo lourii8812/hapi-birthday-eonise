@@ -17,8 +17,8 @@ body {
 }
 
 .secret {
-  background: #7f00ff
-  text-align: center
+  background: #7f00ff;
+  text-align: center;
 }
 
 .screen:not(.active) {
@@ -31,6 +31,11 @@ h1 {
 }
 custom {
   font-family: "Pacifico", cursive;
+  font-size: 30px;
+}
+
+bt2 {
+  font-family: "Noto Sans Japanese", sans-serif;
   font-size: 30px;
 }
 p {
