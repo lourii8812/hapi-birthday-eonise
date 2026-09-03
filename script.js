@@ -198,14 +198,41 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 7000);
         }
     }
-  function updateClock() {
-    const now = new Date();
-    const formattedDateTime = now.toLocaleString(); 
-    document.getElementById("live-clock").textContent = formattedDateTime;
-  }
+    
+    function updateClock() {
+        const now = new Date();
+        const formattedDateTime = now.toLocaleString(); 
+        document.getElementById("live-clock").textContent = formattedDateTime;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+    
+    async function translateToJapanese() {
+    const letters = document.querySelectorAll("bt2");
 
-  updateClock();
-  setInterval(updateClock, 1000);
+    for (const letter of letters) {
+        const english = letter.textContent.trim();
 
+        const response = await fetch(
+            `https://api.mymemory.translated.net/get?q=${encodeURIComponent(english)}&langpair=en|ja`
+        );
 
+        const data = await response.json();
+
+        letter.textContent = data.responseData.translatedText;
+    }
+}
+    translateToJapanese();
+
+    function checkPassword() {
+        const password = document.getElementById("password").value;
+
+        if (password === "09/20/12") {
+            document.getElementById("login").remove("active");
+            document.getElementById("home").add("active");
+        }
+        else {
+            document.getElementById("error").textContent = "Wrong Password LOOOL >///< 😝😝";
+        }
+    }
 });
