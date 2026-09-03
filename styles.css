@@ -16,6 +16,11 @@ body {
   text-align: center;
 }
 
+.secret {
+  background: #7f00ff
+  text-align: center
+}
+
 .screen:not(.active) {
   display: none;
 }
