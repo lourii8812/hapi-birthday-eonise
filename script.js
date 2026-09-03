@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
     translateToJapanese();
 
-    function checkPassword() {
+    window.checkPassword = function() {
         const password = document.getElementById("password").value;
 
         if (password === "09/20/12") {
