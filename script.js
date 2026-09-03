@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.checkPassword = function() {
         const password = document.getElementById("password").value;
 
-        if (password === "09/20/12") {
+        if (password === "loursdev") {
             document.getElementById("login").classList.remove("active");
             document.getElementById("home").classList.add("active");
         }
