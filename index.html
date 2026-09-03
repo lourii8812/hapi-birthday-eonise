@@ -14,7 +14,9 @@
 
 <body>
 <div id="home" class="screen active">
-  <h1>Happy Birthday Eonise!🍰🍭🌠</h1>
+  <custom onclick="showEasterEgg2()"> DO YOU KNOW WHAT DAY IT IS?! 🌻🌻🌻 </custom>
+  <h1> Happy Birthday </h1>
+  <h2> Eonise!🍰🍭🌠 </h2>
   <custom>Choose what gift you wanna open:</custom>
   <div>
     <button class="btn main-btn" onclick="showImages(); launchConfetti();"> Your Pretty Photos! 💅✨</button>
@@ -85,6 +87,11 @@
 <div id="easteregg1" class="secret screen">
   <custom>Ooh you found easter egg #1 ehehehehe 🦋👀 </custom>
   <button onclick="goBackMain()"> GO BACK! </button>
+</div>
+
+<div id="easteregg2" class="secret screen">
+  <custom> OOH #2 Easter egg yayayya </custom>
+  <button onclick="goBackMain()"> Go back? </button>
 </div>
 <button id="mainBack" class="back-btn" style="display: none;" onclick="goBackMain()"> ← Back </button>
 <button id="letterBack" class="back-btn" style="display: none;" onclick="goBackLetter()"> ← Back </button>
