@@ -228,8 +228,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const password = document.getElementById("password").value;
 
         if (password === "09/20/12") {
-            document.getElementById("login").remove("active");
-            document.getElementById("home").add("active");
+            document.getElementById("login").classList.remove("active");
+            document.getElementById("home").classList.add("active");
         }
         else {
             document.getElementById("error").textContent = "Wrong Password LOOOL >///< 😝😝";
