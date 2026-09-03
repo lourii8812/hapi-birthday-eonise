@@ -189,5 +189,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 7000);
         }
     }
+  function updateClock() {
+    const now = new Date();
+    const formattedDateTime = now.toLocaleString(); 
+    document.getElementById("live-clock").textContent = formattedDateTime;
+  }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+
 
 });
