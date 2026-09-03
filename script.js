@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let dafam = document.getElementById("dafam");
     let mb = document.getElementById("mainBack");
     let lb = document.getElementById("letterBack");
+    let es1 = document.getElementById("easteregg1");
 
     mb.style.display = "none";
     lb.style.display = "none";
@@ -47,7 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
         mb.style.display = "block";
         lb.style.display = "none";
     }
+    
+    window.showEasterEgg1 = function() {
+        images.classList.remove("active");
+        es1.classList.add("active");
 
+        mb.style.display = "none";
+        lb.style.display = "none";
+    }
 
     window.showLourence = function() {
         letter.classList.remove("active");
@@ -95,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         letter.classList.remove("active");
         creds.classList.remove("active");
         dafam.classList.remove("active");
+        es1.classList.remove("active");
 
         home.classList.add("active");
         
