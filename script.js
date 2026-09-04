@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
         botClicks++;
 
         if (botClicks >= 20) {
+            sp.classList.remove("spinner");
             bot.classList.remove("active");
             log.classList.add("active");
             return;
@@ -280,5 +281,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.Birthday = function() {
         creds.classList.remove("active");
         fbl.classList.add("active");
+
+        mb.style.display = "none";
+        lb.style.display = "none";
     }
 });
