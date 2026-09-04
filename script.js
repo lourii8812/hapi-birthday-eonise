@@ -17,11 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let es2 = document.getElementById("easteregg2");
     let es3 = document.getElementById("easteregg3");
     let fbl = document.getElementById("fullLetter");
+    let sp = document.getElementById("spinner");
 
     mb.style.display = "none";
     lb.style.display = "none";
 
     window.notBot = function() {
+        sp.classList.add("spinner");
+        
         setTimeout(() => {
             bot.classList.remove("active");
             log.classList.add("active");
