@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-
+    let log = document.getElementById("login");
     let home = document.getElementById("home");
     let letter = document.getElementById("letter");
     let lour = document.getElementById("lour");
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let lb = document.getElementById("letterBack");
     let es1 = document.getElementById("easteregg1");
     let es2 = document.getElementById("easteregg2");
+    let es3 = document.getElementById("easteregg3");
 
     mb.style.display = "none";
     lb.style.display = "none";
@@ -26,6 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
         lb.style.display = "none";
     }
 
+    window.goBackPass = function() {
+        es3.classList.remove("active");
+        log.classList.add("active");
+    }
     window.showFamily = function() {
         home.classList.remove("active");
         dafam.classList.add("active");
@@ -227,9 +232,13 @@ document.addEventListener("DOMContentLoaded", () => {
     window.checkPassword = function() {
         const password = document.getElementById("password").value;
 
-        if (password === "loursdev") {
-            document.getElementById("login").classList.remove("active");
-            document.getElementById("home").classList.add("active");
+        if (password === "daniel:3") {
+            log.classList.remove("active");
+            home.classList.add("active");
+        }
+        else if (password === "epasster") {
+            log.classList.remove("active");
+            es3.classList.add("active");
         }
         else {
             document.getElementById("error").textContent = "Wrong Password LOOOL >///< 😝😝";
