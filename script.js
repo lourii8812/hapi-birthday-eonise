@@ -149,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         dafam.classList.remove("active");
         es1.classList.remove("active");
         es2.classList.remove("active");
+        fbl.classList.remove("active");
 
         home.classList.add("active");
         
