@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let es1 = document.getElementById("easteregg1");
     let es2 = document.getElementById("easteregg2");
     let es3 = document.getElementById("easteregg3");
-    let pass = document.getElementById("reveal");
 
     mb.style.display = "none";
     lb.style.display = "none";
@@ -72,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.goReveal = function() {
-        pass.textContent = "Password: daniel:3";
+        document.getElementById("reveal").textContent = "Password: daniel:3";
     }
 
     window.showLourence = function() {
