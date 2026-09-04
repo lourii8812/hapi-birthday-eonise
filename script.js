@@ -22,9 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     lb.style.display = "none";
 
     window.notBot = function() {
-        bot.classList.remove("active");
-        log.classList.add("active");
-
+        setTimeout(() => {
+            bot.classList.remove("active");
+            log.classList.add("active");
+        }, 180000)
         mb.style.display = "none";
         lb.style.display = "none";
     }
