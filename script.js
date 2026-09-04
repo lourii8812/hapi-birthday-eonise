@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    let bot = document.getElementById("bot");
     let log = document.getElementById("login");
     let home = document.getElementById("home");
     let letter = document.getElementById("letter");
@@ -19,6 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mb.style.display = "none";
     lb.style.display = "none";
+
+    window.notBot = function() {
+        bot.classList.remove("active");
+        log.classList.add("active");
+
+        mb.style.display = "none";
+        lb.style.display = "none";
+    }
     
     window.showImages = function() {
         home.classList.remove("active");
