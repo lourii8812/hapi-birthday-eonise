@@ -269,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
             log.classList.remove("active");
             home.classList.add("active");
         }
-        else if (password === "revealpassrn!") {
+        else if (password === "Iwantpassword!!") {
             log.classList.remove("active");
             es3.classList.add("active");
         }
