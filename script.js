@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.goReveal = function() {
-        document.getElementById("reveal").textContent = "Password: iluvfrio";
+        document.getElementById("reveal").textContent = "Password: devluvsdaniel";
     }
 
     window.showLourence = function() {
@@ -237,11 +237,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.checkPassword = function() {
         const password = document.getElementById("password").value;
 
-        if (password === "iluvfrio") {
+        if (password === "devluvsdaniel") {
             log.classList.remove("active");
             home.classList.add("active");
         }
-        else if (password === "epasster") {
+        else if (password === "revealpassrn!") {
             log.classList.remove("active");
             es3.classList.add("active");
         }
