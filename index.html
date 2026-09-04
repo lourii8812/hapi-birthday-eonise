@@ -34,7 +34,7 @@
   <br>
   <custom> Oh yeah, I'm not giving you the password LOOL</custom>
   <br>
-  <button onclick="goBackPass()"> Continue  Typing Password... </button>
+  <button class="btn purple-btn" onclick="goBackPass()"> Continue  Typing Password... </button>
   <p id="reveal"></p>
 </div>
 <div id="home" class="screen">
@@ -110,18 +110,19 @@
 </div>
 <div id="easteregg1" class="secret screen">
   <custom>Ooh you found easter egg #1 ehehehehe 🦋👀 </custom>
-  <button onclick="goBackMain()"> GO BACK! </button>
+  <button class="btn main-btn" onclick="goBackMain()"> GO BACK! </button>
 </div>
 
 <div id="easteregg2" class="secret screen">
   <custom> OOH #2 Easter egg yayayya </custom>
   <p>Current Date and Time: <span id="live-clock"> Loading... </span></p>
-  <button onclick="goBackMain()"> Go back? </button>
+  <button class="btn main-btn" onclick="goBackMain()"> Go back? </button>
 </div>
 <div id="fullLetter" class="screen">
   <custom>
     sorry mama we don't have budget to add a letter here pu
   </custom>
+  <button class="btn main-btn" onclick="goBackMain()"> Go Back to Homepage </button>
 </div>
 <button id="mainBack" class="back-btn" style="display: none;" onclick="goBackMain()"> ← Back </button>
 <button id="letterBack" class="back-btn" style="display: none;" onclick="goBackLetter()"> ← Back </button>
