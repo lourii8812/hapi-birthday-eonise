@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.goReveal = function() {
-        pass.textcontent = "Password: daniel:3";
+        pass.textContent = "Password: daniel:3";
     }
 
     window.showLourence = function() {
