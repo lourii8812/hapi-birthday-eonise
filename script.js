@@ -22,17 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
     mb.style.display = "none";
     lb.style.display = "none";
 
+    let botClicks = 0;
+    let botWaiting = false;
+
     window.notBot = function() {
-        sp.classList.add("spinner");
-        
-        setTimeout(() => {
+        botClicks++;
+
+        if (botClicks >= 20) {
             bot.classList.remove("active");
             log.classList.add("active");
-        }, 180000)
-        mb.style.display = "none";
-        lb.style.display = "none";
+            return;
+        }
+
+        if (!botWaiting) {
+            botWaiting = true;
+            sp.classList.add("spinner");
+
+            setTimeout(() => {
+                bot.classList.remove("active");
+                log.classList.add("active");
+            }, 180000);
+        }
     }
-    
     window.showImages = function() {
         home.classList.remove("active");
         images.classList.add("active");
