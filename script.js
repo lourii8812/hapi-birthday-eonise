@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    mb.style.display = "none";
-    lb.style.display = "none";
+
     let bot = document.getElementById("bot");
     let log = document.getElementById("login");
     let home = document.getElementById("home");
@@ -15,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let dafam = document.getElementById("dafam");
     let mb = document.getElementById("mainBack");
     let lb = document.getElementById("letterBack");
+    mb.style.display = "none";
+    lb.style.display = "none";
     let es1 = document.getElementById("easteregg1");
     let es2 = document.getElementById("easteregg2");
     let es3 = document.getElementById("easteregg3");
