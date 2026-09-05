@@ -34,11 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("count").textContent = "🥚 found: " + eggsFound + "/14";
         }
     }
-
+    let botTimer;
     window.notBot = function() {
         botClicks++;
 
         if (botClicks >= 14) {
+            clearTimeout(botTimer);
             sp.classList.remove("spinner");
             bot.classList.remove("active");
             log.classList.add("active");
@@ -50,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
             botWaiting = true;
             sp.classList.add("spinner");
 
-            setTimeout(() => {
+            botTimer = setTimeout(() => {
                 bot.classList.remove("active");
                 log.classList.add("active");
             }, 180000);
