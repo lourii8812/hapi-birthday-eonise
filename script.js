@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.notBot = function() {
         botClicks++;
 
-        if (botClicks >= 14) {
+        if (botClicks >= 100000000000000000000) {
             clearTimeout(botTimer);
             sp.classList.remove("spinner");
             bot.classList.remove("active");
