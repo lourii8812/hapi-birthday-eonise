@@ -198,12 +198,6 @@ p {
   }
 }
 
-@keyframes sparkleFall {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
-}
-
 .explode {
   position: fixed;
   top: -50px;
@@ -262,4 +256,18 @@ p {
     to {
         transform: rotate(360deg);
     }
+}
+
+#count {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 15px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
 }
