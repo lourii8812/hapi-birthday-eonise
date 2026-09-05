@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.goReveal = function() {
         setTimeout(() => {
-            document.getElementById("reveal").textContent = "Password: lourlovesdaniel";
+            document.getElementById("reveal").textContent = "Password: hmph!noaccess";
             foundEgg("revpass");
         }, 15000);
     }
@@ -280,11 +280,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.checkPassword = function() {
         const password = document.getElementById("password").value;
 
-        if (password === "lourlovesdaniel") {
+        if (password === "hmph!noaccess") {
             log.classList.remove("active");
             home.classList.add("active");
         }
-        else if (password === "Iwantpassword!!") {
+        else if (password === "iamgayforhim") {
             log.classList.remove("active");
             es3.classList.add("active");
         }
