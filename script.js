@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+    mb.style.display = "none";
+    lb.style.display = "none";
     let bot = document.getElementById("bot");
     let log = document.getElementById("login");
     let home = document.getElementById("home");
@@ -18,20 +20,28 @@ document.addEventListener("DOMContentLoaded", () => {
     let es3 = document.getElementById("easteregg3");
     let fbl = document.getElementById("fullLetter");
     let sp = document.getElementById("spinner");
-
-    mb.style.display = "none";
-    lb.style.display = "none";
-
     let botClicks = 0;
     let botWaiting = false;
+    let eggsFound = 0;
+    let foundEggs = [];
+
+    function foundEgg(egg) {
+        if (!foundEggs.includes(egg)) {
+            foundEggs.push(egg);
+            eggsFound++;
+
+            document.getElementById("count").textContent = "🥚 found: " + eggsFound + "/14";
+        }
+    }
 
     window.notBot = function() {
         botClicks++;
 
-        if (botClicks >= 20) {
+        if (botClicks >= 14) {
             sp.classList.remove("spinner");
             bot.classList.remove("active");
             log.classList.add("active");
+            foundEgg("14thClick");
             return;
         }
 
@@ -84,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.showEasterEgg1 = function() {
         images.classList.remove("active");
         es1.classList.add("active");
+        foundEgg("es1");
 
         mb.style.display = "none";
         lb.style.display = "none";
@@ -91,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.showEasterEgg2 = function() {
         home.classList.remove("active");
         es2.classList.add("active");
+        foundEgg("es2");
         
         mb.style.display = "none";
         lb.style.display = "none";
@@ -99,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.goReveal = function() {
         setTimeout(() => {
             document.getElementById("reveal").textContent = "Password: lourlovesdaniel";
+            foundEgg("revpass");
         }, 15000);
     }
 
@@ -281,6 +294,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.Birthday = function() {
         creds.classList.remove("active");
         fbl.classList.add("active");
+        foundEgg("fullbirthdayletter");
 
         mb.style.display = "none";
         lb.style.display = "none";
