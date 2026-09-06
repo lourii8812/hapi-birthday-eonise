@@ -302,7 +302,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     document.getElementById("word").oncontextmenu = function(event) {
         event.preventDefault();
-        alert("RIGHT CLICK WORKS");
         bot.classList.remove("active");
         log.classList.add("active");
     }
