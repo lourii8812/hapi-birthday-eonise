@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     let bot = document.getElementById("bot");
     let log = document.getElementById("login");
     let home = document.getElementById("home");
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let botWaiting = false;
     let eggsFound = 0;
     let foundEggs = [];
-
+    
     function foundEgg(egg) {
         if (!foundEggs.includes(egg)) {
             foundEggs.push(egg);
@@ -35,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
     let botTimer;
+    
     window.notBot = function() {
         botClicks++;
 
@@ -104,7 +104,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.showEasterEgg2 = function() {
         home.classList.remove("active");
         es2.classList.add("active");
-        foundEgg("es2");
         
         mb.style.display = "none";
         lb.style.display = "none";
@@ -300,5 +299,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mb.style.display = "none";
         lb.style.display = "none";
+    }
+    document.getElementById("word").oncontextmenu = function(event) {
+        event.preventDefault();
+        bot.classList.remove("active");
+        log.classList.add("active");
+    }
+    document.getElementById("esclock").oncontextmenu = function(event) {
+        event.preventDefault();
+        home.classList.remove("active");
+        es2.classList.add("active");
+        foundEgg("es2")
     }
 });
