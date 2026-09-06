@@ -20,12 +20,12 @@
   <br>
   <div id="spinner"></div>
   <br>
-  <bt2> 出て行け。お前は人間ではない、最愛のロボットよ。 </bt2>
+  <bt2> 出て行け。お前は人<span id="word">間</span>ではない、最愛のロボットよ。 </bt2>
 </div>
 <div id="login" class="screen">
-  <custom> Oopsie, my mistake. I thought you're a bot. Continue</custom>
+  <custom> Oopsie, my mistake. I thought you we're a bot. Continue</custom>
   <br>
-  <input type="text" id="password" maxlength= "15" size="40" class="textbox" placeholder="Enter password (15 characters max)">
+  <input type="text" id="password" maxlength= "20" size="40" class="textbox" placeholder="Enter password (15 characters max)">
   <br>
   <button class="btn main-btn" onclick="checkPassword()"> Check </button>
   <p id="error"></p>
@@ -39,7 +39,7 @@
   <p id="reveal"></p>
 </div>
 <div id="home" class="screen">
-  <custom onclick="showEasterEgg2()"> DO YOU KNOW WHAT DAY IT IS?! 🌻🌻🌻 </custom>
+  <custom> DO YOU KNOW WHAT <span id="esclock">DAY</span> IT IS?! 🌻🌻🌻 </custom>
   <h1> Happy Birthday </h1>
   <h1> Eonise!🍰🍭🌠 </h1>
   <custom>Choose what gift you wanna open:</custom>
@@ -108,7 +108,45 @@
   <p> dafam! obviously </p>
   <custom> Webhosting </custom>
   <p> Github Pages </p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <custom> STOP THERES NOTHING HERE! </custom>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br>
+  <button id="eastereggfake" onclick=esf()> Ok here easter egg! </button>
 </div>
+
+<div id="esfake">
+  <custom id="es14check"></custom>
+</div>
+  
 <div id="easteregg1" class="secret screen">
   <custom>Ooh you found easter egg #1 ehehehehe 🦋👀 </custom>
   <button class="btn purple-btn" onclick="goBackMain()"> GO BACK! </button>
