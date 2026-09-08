@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let dafam = document.getElementById("dafam");
     let mb = document.getElementById("mainBack");
     let lb = document.getElementById("letterBack");
+    let birthdaysurprise = document.getElementById("bdsup");
     mb.style.display = "none";
     lb.style.display = "none";
     let es1 = document.getElementById("easteregg1");
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let es3 = document.getElementById("easteregg3");
     let fbl = document.getElementById("fullLetter");
     let sp = document.getElementById("spinner");
+    let esf = document.getElementById("esfake");
     let botClicks = 0;
     let botWaiting = false;
     let eggsFound = 0;
@@ -311,4 +313,15 @@ document.addEventListener("DOMContentLoaded", () => {
         es2.classList.add("active");
         foundEgg("es2");
     }
+    window.esf = function() {
+        creds.classList.remove("active");
+        esf.classList.add("active");
+        if (eggsFound === 5) {
+            document.getElementById("es14check").textContent = "OOH YOU GOT EVERY EASTER EGG AVAILABLE?! Nice!";
+            esf.classList.remove("active");
+            birthdaysurprise.classList.add("active");
+        }
+        else {
+            document.getElementById("es14check").textContent = "Ooh you no get everything yet 👀👀👀";
+        }
 });
