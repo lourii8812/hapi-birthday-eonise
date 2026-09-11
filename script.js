@@ -324,4 +324,5 @@ document.addEventListener("DOMContentLoaded", () => {
         else {
             document.getElementById("es14check").textContent = "Ooh you no get everything yet 👀👀👀";
         }
+    }
 });
