@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.notBot = function() {
         botClicks++;
 
-        if (botClicks >= 100000000000000000000) {
+        if (botClicks >= 14) {
             clearTimeout(botTimer);
             sp.classList.remove("spinner");
             bot.classList.remove("active");
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             document.getElementById("reveal").textContent = "Password: 14isteenfour";
             foundEgg("revpass");
-        }, 15000);
+        }, 3000);
     }
 
     window.showLourence = function() {
@@ -306,6 +306,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         bot.classList.remove("active");
         log.classList.add("active");
+        foundEgg("captchaSkip");
     }
     document.getElementById("esclock").oncontextmenu = function(event) {
         event.preventDefault();
