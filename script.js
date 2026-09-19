@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (input.join("") === keys.join("")) {
-            showBdsurprise();
+            Bdsurprise();
             input = [];
         }
     });
