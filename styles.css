@@ -256,7 +256,7 @@ p {
   padding: 10px;
   background: #fffaf0;
   border: 5px solid #ffd27a;
-  border-radius: 25px
+  border-radius: 25px;
   box-shadow: 0 10px 20px rgba(92, 50, 0, 0.2);
   transition: 0.25s ease;
 }
