@@ -314,16 +314,36 @@ document.addEventListener("DOMContentLoaded", () => {
         es2.classList.add("active");
         foundEgg("es2");
     }
-    window.esf = function() {
-        creds.classList.remove("active");
-        esf.classList.add("active");
-        if (eggsFound === 5) {
-            document.getElementById("es14check").textContent = "OOH YOU GOT EVERY EASTER EGG AVAILABLE?! Nice!";
-            esf.classList.remove("active");
-            birthdaysurprise.classList.add("active");
-        }
-        else {
-            document.getElementById("es14check").textContent = "Ooh you no get everything yet 👀👀👀";
-        }
+
+    window.Bdsurprise = function() {
+        document.querySelector(".screen.active")?.classList.remove("active");
+        birthdaysurprise.classList.add("active");
+        mb.style.display = "none";
+        lb.style.display = "none";
     }
+    const keys = [
+        "1",
+        "4",
+        "n",
+        "a",
+        "s",
+        "i",
+        "m",
+        "e"
+    ];
+
+    let input = [];
+
+    document.addEventListener("keydown", function(event) {
+        input.push(event.key.toLowerCase());
+
+        if (input.length > keys.length) {
+            input.shift();
+        }
+
+        if (input.join("") === keys.join("")) {
+            showBdsurprise();
+            input = [];
+        }
+    });
 });
