@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> A birthday site for my friend named Eonise. Please kindly ignore this as this is only a birthday gift </title>
+<title> ↑ ↓ ← ↓ ENTER </title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 
 <body>
 <div id="count"> 🥚 found: 0/14 </div>
-<div id="bot" class="screen active">
+<div id="bot" class="screen">
   <custom onclick="notBot()"> 🤖🤖🤖🤖 </custom>
   <p> BOT DETECTED! </p>
   <br>
@@ -22,13 +22,14 @@
   <br>
   <jp> 出て行け。お前は人<span id="word">間</span>ではない、最愛のロボットよ。 </jp>
 </div>
-<div id="login" class="screen">
-  <custom> Oopsie, my mistake. I thought you we're a bot. Continue</custom>
+<div id="login" class="screen active">
+  <custom> Happiest Birthday to you! </custom>
   <br>
   <input type="text" id="password" maxlength= "20" size="40" class="textbox" placeholder="Enter password (15 characters max)">
   <br>
   <button class="btn main-btn" onclick="checkPassword()"> Check </button>
   <p id="error"></p>
+  <transparent>itsmy14thbday</transparent>
 </div>
 <div id="easteregg3" class="secret screen">
   <custom onclick="goReveal()"> EVEN YOU FOUND THE PASSWORD EASTER EGG?! OH MI GOSHH bruh hmph! >///< </custom>
