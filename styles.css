@@ -297,3 +297,11 @@ p {
   font-size: 15px;
   font-weight: bold;
 }
+
+transparent {
+    opacity: 0;
+    user-select: text;
+    font-family: "Smooch Sans", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
