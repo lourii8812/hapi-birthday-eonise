@@ -299,7 +299,7 @@ p {
 }
 
 transparent {
-    opacity: 0.0000000000000000000000000000000000000000000000000000000000000001;
+    opacity: 0.03;
     user-select: text;
     font-family: "Smooch Sans", sans-serif;
     font-size: 10px;
